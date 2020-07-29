@@ -1,0 +1,312 @@
+
+h6{
+  font-size: 0.9em;
+}
+.main-section{
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;  
+    width: 100%;
+    height: 150vh;
+    background-size:100% 100% !important;
+  }
+  .link-style{
+    font-size: 0.9em;
+    color: #74d18d !important;
+    font-weight: 500;
+  }
+  .heading1{
+    font-size: 1.2em;
+  }
+  .heading3{
+    font-size: 1.1em;
+    color: #111 !important;
+  }
+  .heading2{
+    font-size: 0.7em;
+  }
+  
+  .heading4{
+    font-size: 0.8em;
+  }
+  
+  .input-style{
+    border-radius: 25px;
+  }
+  .btn-send{
+    background-color: #74d18d;
+    padding: 10px 40px;
+    border-radius: 25px;
+    color: white !important;
+    font-weight: 600;
+    font-size: 0.8em;
+  }
+  .btn-host{
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 25px;
+    color: #74d18d !important;
+    font-weight: 600;
+    font-size: 0.8em;
+    width: 100%;
+  }
+  .btn-search{
+    background-color: #74d18d;
+    padding: 10px 40px;
+    border-radius: 25px;
+    color: white !important;
+    font-weight: 600;
+    font-size: 0.8em;
+  }
+  .color-1{
+    color: #74d18d;
+  }
+  .color-2{
+    color: #a8a8a8 !important;
+  }
+  .become-section{
+    background-image: url(../images/become\ a\ host\ background.png);
+    background-repeat: no-repeat;  
+    width: 100%;
+    background-size:100% 100% !important;
+  }
+  .margin-become{
+  padding-top: 16rem;
+   margin-bottom: 9rem;
+  }
+  .footer-section{
+    background-image: url(../images/footer.png);
+    background-repeat: no-repeat;  
+    width: 100%;
+    background-size:100% 100% !important;
+  }
+  .copyright {
+    background-color: #2a2e31;
+    padding: 12px 0;
+    font-size:14px;
+  }
+  @media (max-width: 780px){
+    
+      .main-section{
+        background-image: url(../images/background.png);
+        background-repeat: no-repeat;  
+        width: 100%;
+        height: 130vh;
+        background-size:auto 100% !important;
+      }
+      .margin-become{
+        padding-top: 3rem;
+         margin-bottom: 9rem;
+        }
+        .footer-section{
+          background-image: url(../images/footer.png);
+          background-repeat: no-repeat;  
+          width: 100%;
+          background-size:auto 100% !important;
+        }
+    }
+    
+/* coustomise colloum */
+.col-2dot4,
+.col-sm-2dot4,
+.col-md-2dot4,
+.col-lg-2dot4,
+.col-xl-2dot4 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-2dot4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+@media (min-width: 540px) {
+    .col-sm-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (min-width: 720px) {
+    .col-md-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (min-width: 960px) {
+    .col-lg-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (min-width: 1140px) {
+    .col-xl-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+/* =======================================my trip================================ */
+.sidebar {
+  position: fixed;
+}
+.border-dash{
+  border-right: 1px solid #eeee;
+
+}
+.bg-nav{
+  background-color: #74d18d !important;
+  color: white !important;
+}
+.sidebar-sticky {
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.text-dash{
+  color: black;
+  font-weight: bold;
+}
+.text-dash:hover{
+  color: #74d18d;
+  font-weight: bold;
+}
+.active-dash{
+  color: #74d18d !important;
+}
+.box{
+  background-color: white;
+  border: 1px solid #eeee;
+  color: #74d18d;
+  border-radius: 50px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 3px;
+  padding-bottom: 3.1px;
+}
+.box2{
+  background-color: white;
+  border: 1px solid #eeee;
+  color: #74d18d ;
+  border-radius: 50px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 3.1px;
+}
+.color-star{
+  font-size: 0.5em;
+  color: #ffbc19;
+}
+.btn-accept{
+  background-color: #74d18d;
+  color: white !important;
+  padding: 2px 18px;
+  font-size: 0.7em;
+  border-radius: 25px;
+}
+.btn-reject{
+  background-color: #74d18d;
+  color: white !important;
+  padding: 2px 20px;
+  font-size: 0.7em;
+  border-radius: 25px;
+}
+.right-center{
+  text-align: right;
+}
+.left-center{
+  text-align: left;
+}
+.page-link {
+  border-radius: 25px !important;
+  background-color: transparent;
+  color: #74d18d;
+  border: 1px solid #74d18d;
+  padding: .5rem .85rem;
+}
+.page-link:hover {
+  border-radius: 25px !important;
+  background-color: #74d18d;
+  color: white;
+  border: 1px solid #74d18d;
+  padding: .5rem .85rem;
+}
+.w-resp{
+  width: 85%;
+}
+.height-card{
+  height: 10.5rem;
+}
+.btn-payment{
+  background-color: white;
+  color: black !important;
+  padding: 6px 20px;
+  font-size: 0.9em;
+  border-radius: 25px;
+  box-shadow: 0 .125rem .85rem rgba(0,0,0,.075)!important;
+}
+.btn-payouts{
+  background-color: #74d18d;
+  color: white !important;
+  padding: 6px 24px;
+  font-size: 0.9em;
+  border-radius: 25px;
+}
+.margin-custom{
+  margin-top: 2.5rem;
+}
+.lable-size{
+  color: #a8a8a8;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+.input-style{
+  border-radius: 25px;
+}
+.btn-transfer{
+  background-color: #74d18d;
+  color: white !important;
+  padding: 6px 24px;
+  font-size: 0.9em;
+  border-radius: 25px;
+  width: 75%;
+}
+.thankyou{
+  background-color: #74d18d;
+  color: white !important;
+  padding: 6px 84px;
+  font-size: 0.9em;
+}
+.margin-tur{
+  margin-top: 10rem ;
+  margin-bottom: 10rem;
+}
+.font-tuur{
+  font-size: 5rem;
+}
+@media(max-width:780px){
+  .right-center{
+    text-align: center;
+  }
+  .left-center{
+    text-align: center;
+  }
+  .sidebar {
+    position: relative;
+  }
+  .w-resp{
+    width: 100%;
+  }
+}
