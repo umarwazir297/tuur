@@ -108,142 +108,196 @@
                         <div class="row mt-5">
                             <div class="col-md-6">
                                 <div class="left-center">
-                                    <button class="btn btn-payment ">Payments</button>
-                                    <button class="btn btn-payouts ml-2">Payouts</button>
-
-                                </div>
-                            </div>
-                            <div class="col-md-6 mt-4 mt-md-0">
-                                <div class="right-center">
-                                    <button class="btn btn-payouts mr-md-2" data-toggle="modal"
-                                        data-target="#staticBackdrop">Payouts to bank</button>
+                                    <button class="btn  btn-payment active-btn " onclick="hideElementPayment()"
+                                        id="btn1">Payments</button>
+                                    <button class="btn  btn-payment ml-2" onclick="hideElementPayout()"
+                                        id="btn2">Payouts</button>
 
                                 </div>
                             </div>
                         </div>
-                        <!-- ======================cards==================== -->
-                        <div class="row mt-4">
-                            <div class="col-md-12">
-                                <div class="card shadow-sm">
-                                    <div class="card-body pt-2 pb-2">
-                                        <div class="row">
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-left">
-                                                    <h6 class="color-2 text-uppercase heading4 font-weight-bold">Trip
-                                                        Name</h6>
-                                                    <h6 class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
-                                                        Host Name</h6>
-                                                    <p class="heading4">John Doe</p>
-                                                </div>
+                        <!-- ==================payment tab============== -->
+                        <div id="payment">
+                            <!-- =====================Current Balance =========-->
+                            <div class="row mt-5">
+                                <div class="col-md-4">
+                                    <div class="card shadow-card" style="border-radius: 15px; border: none;">
+                                        <div class="card-body">
+                                            <div class="text-center">
+                                                <h5 class="heading3 mt-3">Current Balance</h5>
+                                                <h5 class="color-1 font-weight-bold ">$700</h5>
+                                                <button class="btn btn-payouts mt-4">Payouts</button>
+                                                <button class="btn btn-payouts mt-4 ml-md-2">Recharge</button>
+
                                             </div>
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-center">
-                                                    <h6
-                                                        class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
-                                                        Location</h6>
-                                                    <p class="heading4">Islamabd</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ======================Payment Meyhod=================== -->
+                            <div class="row mt-5">
+                                <div class="col-md-10">
+                                    <h5 class="color-1 text-uppercase">Payment method</h5>
+                                    <p class="color-2 heading4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid error accusamus, quaerat quo cupiditate consectetur itaque voluptate sit
+                                        ipsa ratione quidem enim nam non laudantium cumque in nesciunt. Blanditiis,
+                                        error?
+                                    </p>
+                                    <button class="btn btn-payouts mt-3" data-toggle="modal"
+                                        data-target="#staticBackdrop3">
+                                        Add Payment methods</button>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        <!-- ==================payout tab============== -->
+                        <div id="payout" style="display: none;">
+                            <!-- ========================pay outs bank========== -->
+                            <div class="row justify-content-end">
+                                <div class="col-md-6 mt-4 mt-md-0">
+                                    <div class="right-center">
+                                        <button class="btn btn-payouts mr-md-2" data-toggle="modal"
+                                            data-target="#staticBackdrop">Payouts to bank</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ======================cards==================== -->
+                            <div class="row mt-4">
+                                <div class="col-md-12">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body pt-2 pb-2">
+                                            <div class="row">
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-left">
+                                                        <h6 class="color-2 text-uppercase heading4 font-weight-bold">
+                                                            Trip
+                                                            Name</h6>
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                            Host Name</h6>
+                                                        <p class="heading4">John Doe</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-center">
-                                                    <h6
-                                                        class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
-                                                        Start & End Date</h6>
-                                                    <p class="heading4">11jul- 15 sept 2020</p>
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-center">
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
+                                                            Location</h6>
+                                                        <p class="heading4">Islamabd</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-right">
-                                                    <img src="images/master card.png" class="img-fluid" width="30">
-                                                    <h6 class="color-1 text-uppercase heading4 mt-3 font-weight-bold">
-                                                        Amount</h6>
-                                                    <p class="heading4">$700</p>
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-center">
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
+                                                            Start & End Date</h6>
+                                                        <p class="heading4">11jul- 15 sept 2020</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-right">
+                                                        <img src="images/master card.png" class="img-fluid" width="30">
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 mt-3 font-weight-bold">
+                                                            Amount</h6>
+                                                        <p class="heading4">$700</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-md-12">
-                                <div class="card shadow-sm">
-                                    <div class="card-body pt-2 pb-2">
-                                        <div class="row">
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-left">
-                                                    <h6 class="color-2 text-uppercase heading4 font-weight-bold">Trip
-                                                        Name</h6>
-                                                    <h6 class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
-                                                        Host Name</h6>
-                                                    <p class="heading4">John Doe</p>
+                            <div class="row mt-4">
+                                <div class="col-md-12">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body pt-2 pb-2">
+                                            <div class="row">
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-left">
+                                                        <h6 class="color-2 text-uppercase heading4 font-weight-bold">
+                                                            Trip
+                                                            Name</h6>
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                            Host Name</h6>
+                                                        <p class="heading4">John Doe</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-center">
-                                                    <h6
-                                                        class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
-                                                        Location</h6>
-                                                    <p class="heading4">Islamabd</p>
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-center">
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
+                                                            Location</h6>
+                                                        <p class="heading4">Islamabd</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-center">
-                                                    <h6
-                                                        class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
-                                                        Start & End Date</h6>
-                                                    <p class="heading4">11jul- 15 sept 2020</p>
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-center">
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
+                                                            Start & End Date</h6>
+                                                        <p class="heading4">11jul- 15 sept 2020</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-right">
-                                                    <img src="images/master card.png" class="img-fluid" width="30">
-                                                    <h6 class="color-1 text-uppercase heading4 mt-3 font-weight-bold">
-                                                        Amount</h6>
-                                                    <p class="heading4">$700</p>
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-right">
+                                                        <img src="images/master card.png" class="img-fluid" width="30">
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 mt-3 font-weight-bold">
+                                                            Amount</h6>
+                                                        <p class="heading4">$700</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-md-12">
-                                <div class="card shadow-sm">
-                                    <div class="card-body pt-2 pb-2">
-                                        <div class="row">
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-left">
-                                                    <h6 class="color-2 text-uppercase heading4 font-weight-bold">Trip
-                                                        Name</h6>
-                                                    <h6 class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
-                                                        Host Name</h6>
-                                                    <p class="heading4">John Doe</p>
+                            <div class="row mt-4">
+                                <div class="col-md-12">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body pt-2 pb-2">
+                                            <div class="row">
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-left">
+                                                        <h6 class="color-2 text-uppercase heading4 font-weight-bold">
+                                                            Trip
+                                                            Name</h6>
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                            Host Name</h6>
+                                                        <p class="heading4">John Doe</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-center">
-                                                    <h6
-                                                        class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
-                                                        Location</h6>
-                                                    <p class="heading4">Islamabd</p>
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-center">
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
+                                                            Location</h6>
+                                                        <p class="heading4">Islamabd</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-center">
-                                                    <h6
-                                                        class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
-                                                        Start & End Date</h6>
-                                                    <p class="heading4">11jul- 15 sept 2020</p>
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-center">
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 margin-custom font-weight-bold">
+                                                            Start & End Date</h6>
+                                                        <p class="heading4">11jul- 15 sept 2020</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-3 col-6">
-                                                <div class="text-right">
-                                                    <img src="images/master card.png" class="img-fluid" width="30">
-                                                    <h6 class="color-1 text-uppercase heading4 mt-3 font-weight-bold">
-                                                        Amount</h6>
-                                                    <p class="heading4">$700</p>
+                                                <div class="col-md-3 col-6">
+                                                    <div class="text-right">
+                                                        <img src="images/master card.png" class="img-fluid" width="30">
+                                                        <h6
+                                                            class="color-1 text-uppercase heading4 mt-3 font-weight-bold">
+                                                            Amount</h6>
+                                                        <p class="heading4">$700</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -257,52 +311,53 @@
         </div>
     </section>
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-        role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
         <div class="modal-dialog  modal-dialog-centered">
             <div class="modal-content">
                 <div id="detail">
-                <div class="modal-header" style="border-bottom: none;">
-                    <h5 class="modal-title ml-auto " id="staticBackdropLabel">Bank Details</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row justify-content-center">
-                        <div class="col-md-10">
-                            <form>
-                                <div class="form-group mb-1">
-                                    <label for="exampleInputEmail1" class="lable-size text-uppercase ml-3">Name</label>
-                                    <input type="text" class="form-control bg-light input-style" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title ml-auto " id="staticBackdropLabel">Bank Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <form>
+                                    <div class="form-group mb-1">
+                                        <label for="exampleInputEmail1"
+                                            class="lable-size text-uppercase ml-3">Name</label>
+                                        <input type="text" class="form-control bg-light input-style"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group mb-1">
+                                        <label for="exampleInputEmail2" class="lable-size text-uppercase ml-3">Account
+                                            Number</label>
+                                        <input type="text" class="form-control bg-light input-style"
+                                            id="exampleInputEmail2" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group mb-1">
+                                        <label for="exampleInputEmail3" class="lable-size text-uppercase ml-3">Bank
+                                            NAme</label>
+                                        <input type="text" class="form-control bg-light input-style"
+                                            id="exampleInputEmail3" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group mb-1">
+                                        <label for="exampleInputEmail4" class="lable-size text-uppercase ml-3">Branch
+                                            Code</label>
+                                        <input type="text" class="form-control bg-light input-style"
+                                            id="exampleInputEmail4" aria-describedby="emailHelp">
+                                    </div>
+                                </form>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-transfer mt-5 text-uppercase mb-3"
+                                        onclick="hideElementTransfer() ">transfer</button>
                                 </div>
-                                <div class="form-group mb-1">
-                                    <label for="exampleInputEmail2" class="lable-size text-uppercase ml-3">Account
-                                        Number</label>
-                                    <input type="text" class="form-control bg-light input-style" id="exampleInputEmail2"
-                                        aria-describedby="emailHelp">
-                                </div>
-                                <div class="form-group mb-1">
-                                    <label for="exampleInputEmail3" class="lable-size text-uppercase ml-3">Bank
-                                        NAme</label>
-                                    <input type="text" class="form-control bg-light input-style" id="exampleInputEmail3"
-                                        aria-describedby="emailHelp">
-                                </div>
-                                <div class="form-group mb-1">
-                                    <label for="exampleInputEmail4" class="lable-size text-uppercase ml-3">Branch
-                                        Code</label>
-                                    <input type="text" class="form-control bg-light input-style" id="exampleInputEmail4"
-                                        aria-describedby="emailHelp">
-                                </div>
-                            </form>
-                            <div class="text-center">
-                                <button type="submit"
-                                    class="btn btn-transfer mt-5 text-uppercase mb-3" onclick="hideElementTransfer() ">transfer</button>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <div id="thanks" style="display: none;">
                     <div class="modal-header" style="border-bottom: none;">
@@ -328,12 +383,87 @@
             </div>
         </div>
     </div>
-<script>
-     function hideElementTransfer() {
+    <!-- Modal 2  data-backdrop="static" data-keyboard="true"-->
+    <div class="modal fade" id="staticBackdrop3" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: none;">
+                    <h5 class="modal-title ml-auto  text-uppercase color-1" id="staticBackdropLabel">Add Payment methods
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-3 col-6 mt-3 mt-md-0">
+                                    <img src="images/visa.png" class="img-fluid" width="60">
+                                </div>
+                                <div class="col-md-3 col-6 mt-3 mt-md-0">
+                                    <img src="images/master card.png" class="img-fluid" width="45">
+                                </div>
+                                <div class="col-md-3 col-6 mt-3 mt-md-0">
+                                    <img src="images/paypal_PNG2.png " class="img-fluid mt-md-1">
+                                </div>
+                                <div class="col-md-3 col-6 mt-3 mt-md-0">
+                                    <img src="images/g pay.png" class="img-fluid" width="120">
+                                </div>
+                            </div>
+                            <form>
+                                <div class="form-group mb-1 mt-4 ">
+                                    <label for="exampleInputEmail1" class="lable-size text-uppercase ml-3">Name</label>
+                                    <input type="text" class="form-control bg-light input-style" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group mb-1">
+                                    <label for="exampleInputEmail2" class="lable-size text-uppercase ml-3">Card
+                                        Number</label>
+                                    <input type="text" class="form-control bg-light input-style" id="exampleInputEmail2"
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group mb-1">
+                                    <label for="exampleInputEmail3" class="lable-size text-uppercase ml-3">Expiration
+                                        date </label><span class="float-right lable-size mt-1 "
+                                        style="color: black;">CVV <img src="images/question mark.png" width="16"></span>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <input type="text" class="form-control bg-light input-style"
+                                                id="exampleInputEmail3" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control bg-light input-style"
+                                                id="exampleInputEmail3" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control bg-light input-style"
+                                                id="exampleInputEmail3" aria-describedby="emailHelp">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 justify-content-center mb-4">
+                                    <div class="col-md-8">
+                                        <div class="text-center">
+                                            <button class="btn btn-payouts text-uppercase w-100">Save new card</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function hideElementTransfer() {
             document.getElementById('detail').style.display = 'none';
             document.getElementById('thanks').style.display = 'block';
         }
-</script>    
+    </script>
     <script>
         function hideElementDash() {
             var x = document.getElementById("col1");
@@ -343,6 +473,14 @@
             } else {
                 x.style.display = "none";
             }
+        }
+        function hideElementPayment() {
+            document.getElementById('payment').style.display = 'block';
+            document.getElementById('payout').style.display = 'none';
+        }
+        function hideElementPayout() {
+            document.getElementById('payment').style.display = 'none';
+            document.getElementById('payout').style.display = 'block';
         }
     </script>
     <!-- Optional JavaScript -->
@@ -356,6 +494,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <script>
+        $('#btn1').click(function () {
+            $('#btn1').addClass('active-btn')
+            $('#btn2').removeClass('active-btn')
+        })
+        $('#btn2').click(function () {
+            $('#btn2').addClass('active-btn')
+            $('#btn1').removeClass('active-btn')
+        })
+    </script>
 </body>
 
 </html>

@@ -312,7 +312,7 @@ h6{
 }
 button:focus,button:active {
   outline: none !important;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 .hero1 {
   position:relative;
@@ -363,10 +363,10 @@ button:focus,button:active {
   border-left: solid 15px transparent;
   border-right: solid 15px transparent;
 }
-.sidebar-left-nav {
-  -webkit-transform: translate3d(-100%, 0px, 0px);
-  transform: translate3d(-100%, 0px, 0px);
-  visibility: visible;
-  transition: all 0.5s ease 0s;
-  -webkit-transition: all 0.5s ease 0s;
+.shadow-card{
+  box-shadow: 0 .225rem .65rem rgba(0,0,0,.075)!important;
+}
+.active-btn{
+  background-color: #74d18d;
+  color: white !important;
 }
