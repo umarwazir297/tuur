@@ -216,11 +216,19 @@ h6{
   font-size: 0.7em;
   border-radius: 25px;
 }
+
 .btn-reject{
   background-color: #74d18d;
   color: white !important;
   padding: 2px 20px;
   font-size: 0.7em;
+  border-radius: 25px;
+}
+.btn-view{
+  background-color: #74d18d;
+  color: white !important;
+  padding: 1px 18px;
+  font-size: 0.6em;
   border-radius: 25px;
 }
 .right-center{
