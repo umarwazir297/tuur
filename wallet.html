@@ -374,7 +374,144 @@
                                     <h4 class="mt-4 color-1 text-uppercase">Great!</h4>
                                     <p class="heading4 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Enim quod asperiores mollitia dolores, illo</p>
-                                    <span class="thankyou ">Thankyou</span>
+                                    <span class="thankyou" onclick="hideElementReview() " style="cursor: pointer;">Thankyou</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="review" style="display: none;">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title ml-auto text-uppercase " id="staticBackdropLabel">Review your host</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row justify-content-center mt-3">
+                            <div class="col-md-11">
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-arrow-right active-ar" id="st1">Step1</button>
+                                    <button type="button" class="btn btn-arrow-right ml-md-2"  id="st2">Step2</button>
+                                    <button type="button" class="btn btn-arrow-right ml-md-2"  id="st3">Step3</button>
+                                    <button type="button" class="btn btn-arrow-right ml-md-2"  id="st4">Step4</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ==================================step 1===================== -->
+                        <div id="step1">
+                            <div class="row justify-content-center mt-5">
+                                <div class="col-md-5">
+                                    <h6 class="text-uppercase color-2 lable-size  font-weight-bold">How was your experience?
+                                    </h6>
+                                    <form>
+                                        <div class=" mt-4">
+                                            <input id="Option" type="checkbox">
+                                            <label class="checkbox  color-2" for="Option"
+                                                style="font-size: 14px; font-weight: 500;"> Excellent</label>
+                                        </div>
+                                        <div class="mt-2">
+                                            <input id="Option-2" type="checkbox">
+                                            <label class="checkbox color-2" for="Option-2"
+                                                style="font-size: 14px; font-weight: 500;"> Good</label>
+                                        </div>
+                                        <div class="mt-2">
+                                            <input id="Option-3" type="checkbox">
+                                            <label class="checkbox color-2" for="Option-3"
+                                                style="font-size: 14px; font-weight: 500;"> Satisfactory</label>
+                                        </div>
+                                        <div class="mt-2">
+                                            <input id="Option-4" type="checkbox">
+                                            <label class="checkbox color-2" for="Option-4"
+                                                style="font-size: 14px; font-weight: 500;">Not Good</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-4 mb-4">
+                                <div class="col-6">
+                                    <div class="text-center">
+                                        <button class="btn btn-next" onclick=" hideElementStep1()">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- =====================step 2=============== -->
+                        <div id="step2" style="display: none;">
+                            <div class="row justify-content-center mt-5">
+                                <div class="col-md-5">
+                                    <h6 class="text-uppercase color-2 lable-size  font-weight-bold">Was your experience good?
+                                    </h6>
+                                    <form>
+                                        <div class=" mt-4">
+                                            <input id="Option5" type="checkbox">
+                                            <label class="checkbox  color-2" for="Option5"
+                                                style="font-size: 14px; font-weight: 500;"> Yes</label>
+                                        </div>
+                                        <div class="mt-2">
+                                            <input id="Option-6" type="checkbox">
+                                            <label class="checkbox color-2" for="Option-6"
+                                                style="font-size: 14px; font-weight: 500;"> No</label>
+                                        </div>
+                                        <div class="mt-2">
+                                            <input id="Option-7" type="checkbox">
+                                            <label class="checkbox color-2" for="Option-7"
+                                                style="font-size: 14px; font-weight: 500;"> Not sure</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-5 mb-4">
+                                <div class="col-6">
+                                    <div class="text-center">
+                                        <button class="btn btn-next" onclick=" hideElementStep2()">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- =====================step 3=============== -->
+                         <div id="step3" style="display: none;">
+                            <div class="row justify-content-center mt-5">
+                                <div class="col-md-6">
+                                    <h6 class="text-uppercase color-2 lable-size  font-weight-bold">Rate Your Host
+                                    </h6>
+                                    <div class="color-star mt-4 left-center ml-3 " style="font-size: 1.5em;">
+                                        <span class="fas fa-star checked "></span>
+                                        <span class="fas fa-star checked "></span>
+                                        <span class="fas fa-star  checked"></span>
+                                        <span class="far fa-star"></span>
+                                        <span class="far fa-star"></span>
+                                        <br>
+                                        </div>
+                                        <h6 class="heading2 color-2 text-center mt-3">4.9/5.0</h6>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-5 mb-4">
+                                <div class="col-6">
+                                    <div class="text-center">
+                                        <button class="btn btn-next" onclick=" hideElementStep3()">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- =====================step 4=============== -->
+                        <div id="step4" style="display: none;">
+                            <div class="row justify-content-center mt-5">
+                                <div class="col-md-6">
+                                    <h6 class="text-uppercase color-2 lable-size  font-weight-bold">your final comments
+                                    </h6>
+                                    <form>
+                                        <div class="form-group mt-3">
+                                            <textarea class="form-control bg-light" id="exampleFormControlTextarea1" rows="3" style="border-radius: 7px; border: none;"></textarea>
+                                          </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-5 mb-4">
+                                <div class="col-6">
+                                    <div class="text-center">
+                                        <button class="btn btn-next">Submit</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -463,7 +600,48 @@
             document.getElementById('detail').style.display = 'none';
             document.getElementById('thanks').style.display = 'block';
         }
+        function hideElementReview() {
+            document.getElementById('detail').style.display = 'none';
+            document.getElementById('thanks').style.display = 'none';
+            document.getElementById('review').style.display = 'block';
+
+        }
     </script>
+     <script>
+        function hideElementStep1() {
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+            document.getElementById('step3').style.display = 'none';
+            document.getElementById('step4').style.display = 'none';
+            document.getElementById("st1").classList.remove("active-ar");
+            document.getElementById("st2").classList.add("active-ar");
+            document.getElementById("st3").classList.remove("active-ar");
+            document.getElementById("st4").classList.remove("active-ar");
+
+
+        }
+        function hideElementStep2() {
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step3').style.display = 'block';
+            document.getElementById('step4').style.display = 'none';
+            document.getElementById("st1").classList.remove("active-ar");
+            document.getElementById("st2").classList.remove("active-ar");
+            document.getElementById("st3").classList.add("active-ar");
+            document.getElementById("st4").classList.remove("active-ar");
+        }
+        function hideElementStep3() {
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step3').style.display = 'none';
+            document.getElementById('step4').style.display = 'block';
+            document.getElementById("st1").classList.remove("active-ar");
+            document.getElementById("st2").classList.remove("active-ar");
+            document.getElementById("st3").classList.remove("active-ar");
+            document.getElementById("st4").classList.add("active-ar");
+        }
+    </script>
+    
     <script>
         function hideElementDash() {
             var x = document.getElementById("col1");
