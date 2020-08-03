@@ -21,7 +21,7 @@
                 <div class="col-md-2 shadow-sm " id="col1" style="transition: ease-in 0.7s; height: 100vh;">
                     <div class="sidebar">
                         <img src="images/logo.png" class="img-fluid mt-3 ml-md-2" width="60">
-                        <a href="#" class="text-decoration-none">
+                        <a href="dashboard.html" class="text-decoration-none">
                             <div class="row">
                                 <div class="col-12">
                                     <h6 class="mt-5 pt-5 text-dash text-uppercase ml-3"><span class="box mr-2"><i
@@ -166,6 +166,61 @@
             }
         }
     </script>
+    <button class="btn btn-payouts mt-3" data-toggle="modal"
+    data-target="#staticBackdrop">
+    Add Payment methods</button>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div id="detail">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <h5 class="modal-title ml-auto " id="staticBackdropLabel">Bank Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <form>
+                                    <div class="form-group mb-1">
+                                        <label for="exampleInputEmail1"
+                                            class="lable-size text-uppercase ml-3">Name</label>
+                                        <input type="text" class="form-control bg-light input-style"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group mb-1">
+                                        <label for="exampleInputEmail2" class="lable-size text-uppercase ml-3">Account
+                                            Number</label>
+                                        <input type="text" class="form-control bg-light input-style"
+                                            id="exampleInputEmail2" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group mb-1">
+                                        <label for="exampleInputEmail3" class="lable-size text-uppercase ml-3">Bank
+                                            NAme</label>
+                                        <input type="text" class="form-control bg-light input-style"
+                                            id="exampleInputEmail3" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group mb-1">
+                                        <label for="exampleInputEmail4" class="lable-size text-uppercase ml-3">Branch
+                                            Code</label>
+                                        <input type="text" class="form-control bg-light input-style"
+                                            id="exampleInputEmail4" aria-describedby="emailHelp">
+                                    </div>
+                                </form>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-transfer mt-5 text-uppercase mb-3"
+                                        onclick="hideElementTransfer() ">transfer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
