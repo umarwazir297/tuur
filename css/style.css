@@ -464,7 +464,7 @@ button.switch-month:hover {
    padding: 4px 15px;
    font-size: 0.8em;
    background-color: #212529;
-   color: white;
+   color: white !important;
 }
 .active-ar{
   background-color: #74d18d !important;
