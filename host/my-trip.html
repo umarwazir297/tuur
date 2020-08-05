@@ -1,0 +1,1566 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <title>Host My trips</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 shadow-sm" id="col1" style="transition: display ease-in-out 0.7s;">
+                    <div class="sidebar">
+                        <img src="images/logo.png" class="img-fluid mt-3 ml-md-2" width="60">
+                        <a href="dashboard.html" class="text-decoration-none">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 class="mt-5 pt-5 text-dash text-uppercase ml-3"><span class="box mr-2"><i
+                                                class="fas fa-qrcode"></i></span> Dashboard</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="trip-request.html" class="text-decoration-none">
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <h6 class=" text-dash text-uppercase ml-3"><span class="box2 mr-2"><i
+                                                class="fas fa-map-marker-alt"></i></span> Request a trip
+                                    </h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="my-trip.html" class="text-decoration-none">
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <h6 class=" text-dash active-dash text-uppercase ml-3"><span
+                                            class="box2 bg-nav mr-2"><i class="fas fa-lightbulb"></i></span> My trips
+                                    </h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="wallet.html" class="text-decoration-none">
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <h6 class=" text-dash text-uppercase ml-3"><span class="box mr-2"><i
+                                                class="fab fa-google-wallet"></i></span> Wallet
+                                    </h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="help.html" class="text-decoration-none">
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <h6 class=" text-dash text-uppercase ml-3"><span class="box mr-2"><i
+                                                class="fas fa-info-circle"></i></span> Help
+                                    </h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="settings.html" class="text-decoration-none">
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <h6 class=" text-dash text-uppercase ml-3"><span class="box mr-2"><i
+                                                class="fas fa-cog"></i></span> Settings</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md col-12 p-0" id="col2">
+                    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-nav">
+                        <a class="navbar-brand" href="#" onclick=" hideElementDash()"><img src="images/menu.png"
+                                width="27"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#"><img src="images/search.png" width="20"></a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item mr-2">
+                                    <a class="nav-link" href="#"><img src="images/bell.png" width="20"></a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link mr-md-5" href="#"><img src="images/profile.png" width="20"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="container mb-5">
+                        <div class="row justify-content-center" >
+                            <div class="col-sm-2dot4 col-6">
+                                <button class="hero1 mt-5 text-uppercase" id="firstbtn" onclick="hideElementALL()">All trips</button>
+                            </div>
+                            <div class="col-sm-2dot4 col-6">
+                                <button class="hero1 mt-5 text-uppercase" onclick="hideElementPre()">present</button>
+                            </div>
+                            <div class="col-sm-2dot4 col-6">
+                                <button class="hero1 mt-5 text-uppercase" onclick="hideElementUpc()">upcomming</button>
+                            </div>
+                            <div class="col-sm-2dot4 col-6">
+                                <button class="hero1 mt-5 text-uppercase" onclick="hideElementPas()">past</button>
+                            </div>
+                            <div class="col-sm-2dot4 col-6">
+                                <button class="hero1 mt-5 text-uppercase" onclick="hideElementSav()">saved</button>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mt-md-0">
+                            <div class="col-md-12">
+                                <div class="card shadow" style="border: none;">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <!-- ===================all trip tab==== -->
+                                                <div id="all">
+                                                    <div class="card shadow-sm">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a class="btn btn-payouts" href="trip-offer.html">View detial</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a class="btn btn-payouts" href="trip-offer.html">View detial</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a class="btn btn-payouts" href="trip-offer.html">View detial</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a class="btn btn-payouts" href="trip-offer.html">View detial</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ===================Present tab==== -->
+                                                <div id="pre" style="display: none;">
+                                                    <div class="card shadow-sm">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a class="btn btn-payouts" href="present-detail.html">View detial</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Present</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a class="btn btn-payouts" href="present-detail.html">View detial</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a class="btn btn-payouts" href="present-detail.html">View detial</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a class="btn btn-payouts" href="present-detail.html">View detial</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ===================Upcomming tab==== -->
+                                                <div id="upc" style="display: none;">
+                                                    <div class="card shadow-sm">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Upcomming</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ===================Past tab==== -->
+                                                <div id="pas"style="display: none;" >
+                                                    <div class="card shadow-sm">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Past</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ===================Saved tab==== -->
+                                                <div id="sav" style="display: none;">
+                                                    <div class="card shadow-sm">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Saved</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-sm mt-4">
+                                                        <div class="card-body p-3">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-md-10">
+                                                                    <h6 class="color-2 text-uppercase font-weight-bold">
+                                                                        Trip
+                                                                        Name</h6>
+                                                                    <p class="color-2 heading4 mt-3">Lorem ipsum dolor
+                                                                        sit
+                                                                        amet, consectetur adipisicing elit. Provident
+                                                                        sapiente corporis, tempore reiciendis
+                                                                        consectetur
+                                                                        odit repudiandae dolorem, impedit explicabo at
+                                                                        ullam! Voluptas quae deserunt, explicabo sed
+                                                                        eius
+                                                                        expedita autem iusto.</p>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <button class="btn btn-payouts">View detial</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="left-center ml-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Host Name</h6>
+                                                                        <p class="heading4 ml-md-2">John Doe</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Location</h6>
+                                                                        <p class="heading4 ml-md-2">Islamabad</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Start & End Date</h6>
+                                                                        <p class="heading4 ml-md-2">11jul- 15 sept 2020
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-6">
+                                                                    <div class="text-center">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Status</h6>
+                                                                        <p class="heading4 ml-md-2">Complete</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2dot4 col-12">
+                                                                    <div class="right-center mr-md-5">
+                                                                        <h6
+                                                                            class="color-1 text-uppercase heading4 mt-4 font-weight-bold">
+                                                                            Price</h6>
+                                                                        <p class="heading4 mr-mde-2">$700</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function hideElementDash() {
+            var x = document.getElementById("col1");
+
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function hideElementALL() {
+            document.getElementById('all').style.display = 'block';
+            document.getElementById('pre').style.display = 'none';
+            document.getElementById('upc').style.display = 'none';
+            document.getElementById('pas').style.display = 'none';
+            document.getElementById('sav').style.display = 'none';
+        }
+        function hideElementPre() {
+            document.getElementById('all').style.display = 'none';
+            document.getElementById('pre').style.display = 'block';
+            document.getElementById('upc').style.display = 'none';
+            document.getElementById('pas').style.display = 'none';
+            document.getElementById('sav').style.display = 'none';
+        }
+        function hideElementUpc() {
+            document.getElementById('all').style.display = 'none';
+            document.getElementById('pre').style.display = 'none';
+            document.getElementById('upc').style.display = 'block';
+            document.getElementById('pas').style.display = 'none';
+            document.getElementById('sav').style.display = 'none';
+        }
+        function hideElementPas() {
+            document.getElementById('all').style.display = 'none';
+            document.getElementById('pre').style.display = 'none';
+            document.getElementById('upc').style.display = 'none';
+            document.getElementById('pas').style.display = 'block';
+            document.getElementById('sav').style.display = 'none';
+        }
+        function hideElementSav() {
+            document.getElementById('all').style.display = 'none';
+            document.getElementById('pre').style.display = 'none';
+            document.getElementById('upc').style.display = 'none';
+            document.getElementById('pas').style.display = 'none';
+            document.getElementById('sav').style.display = 'block';
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script>
+
+
+        $(document).ready(function () {
+            setTimeout(() => {
+                $('#firstbtn').click()
+            }, 50)
+            $('.hero1').click(function () {
+                $('.hero').each(function (i, obj) {
+                    $(obj).removeClass('hero').addClass('hero1');
+                });
+                $(this).removeClass('hero1').addClass('hero');
+            });
+        });
+    </script>
+</body>
+
+</html>

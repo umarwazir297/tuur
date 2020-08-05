@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <title>Host My trips detail</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 shadow-sm" id="col1" style="transition: ease-in 0.7s;">
+                    <div class="sidebar">
+                        <img src="images/logo.png" class="img-fluid mt-3 ml-md-2" width="60">
+                        <a href="dashboard.html" class="text-decoration-none">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 class="mt-5 pt-5 text-dash text-uppercase ml-3"><span class="box mr-2"><i
+                                                class="fas fa-qrcode"></i></span> Dashboard</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="trip-request.html" class="text-decoration-none">
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <h6 class=" text-dash text-uppercase ml-3"><span class="box2 mr-2"><i
+                                                class="fas fa-map-marker-alt"></i></span> Request a trip
+                                    </h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="my-trip.html" class="text-decoration-none">
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <h6 class=" text-dash active-dash text-uppercase ml-3"><span class="box2 bg-nav mr-2"><i
+                                                class="fas fa-lightbulb"></i></span> My trips</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="wallet.html" class="text-decoration-none">
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <h6 class=" text-dash text-uppercase ml-3"><span class="box mr-2"><i
+                                                class="fab fa-google-wallet"></i></span> Wallet
+                                    </h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="help.html" class="text-decoration-none">
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <h6 class=" text-dash text-uppercase ml-3"><span class="box mr-2"><i
+                                                class="fas fa-info-circle"></i></span> Help
+                                    </h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="settings.html" class="text-decoration-none">
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <h6 class=" text-dash text-uppercase ml-3"><span class="box mr-2"><i
+                                                class="fas fa-cog"></i></span> Settings</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md col-12 p-0" id="col2">
+                    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-nav">
+                        <a class="navbar-brand" href="#" onclick=" hideElementDash()"><img src="images/menu.png"
+                                width="27"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#"><img src="images/search.png" width="20"></a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item mr-2">
+                                    <a class="nav-link" href="#"><img src="images/bell.png" width="20"></a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link mr-md-5" href="#"><img src="images/profile.png" width="20"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <img src="images/trip detail page.png" class="img-fluid w-100">
+                    <!-- ====================main row===================== -->
+                    <div class="container mb-5">
+                        <div class="row mt-5">
+                            <div class="col-4">
+                                <h5 class="text-uppercase font-weight-bold">Turkey</h5>
+                            </div>
+                            <div class="col-8">
+                                <div class="text-right">
+                                    <button class="btn btn-payouts">Report a Problem</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-5" >
+                            <div class="col-md-10 pt-3">
+                                <div class="text-center">
+                                    <img src="images/Group 184.png" class="img-fluid" width="700">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    <div class="row mt-5 pt-5">
+                        <div class="col-md-7">
+                            <div class="row ">
+                                <div class="col-12">
+                                    <h6 class="heading3">20 nights in Turkey</h6>
+                                    <h6 class="color-2" style="font-size: 0.6em;">17 nov to 17 dec 2020</h6>
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <div class="calendar calendar-first" id="calendar_first">
+                                        <div class="calendar_header">
+                                            <button class="switch-month switch-left"> <i class="fa fa-chevron-left"></i></button>
+                                             <h2></h2>
+                                            <button class="switch-month switch-right"> <i class="fa fa-chevron-right"></i></button>
+                                        </div>
+                                        <div class="calendar_weekdays"></div>
+                                        <div class="calendar_content"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="images/maop.png" class="img-fluid mt-5">
+                            <div class="row mt-5">
+                                <div class="col-12">
+                                    <h6 class="color-1 text-uppercase heading2 font-weight-bold">Your Reviews</h6>
+                                </div>
+                            </div>
+                            <!-- ================card 1========== -->
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body p-md-2">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <div class="text-center">
+                                                    <img src="images/img.png" class="img-fluid" width="50">
+                                                </div>
+                                                </div>
+                                                <div class="col-md-10 pl-0 mt-3 mt-md-0">
+                                                    <div class="row">
+                                                        <div class="col-md-10">
+                                                            
+                                                            <h6 class="heading2 left-center font-weight-bold color-2 text-uppercase ml-3 ml-md-0">User name
+                                                                <br>
+                                                        <span class="heading4 color-2 font-weight-bold">18-feb-2020</span>
+                                                            </h6>
+
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="color-star mt-1 left-center ml-3 ml-md-0">
+                                                                <span class="fas fa-star checked "></span>
+                                                                <span class="fas fa-star checked "></span>
+                                                                <span class="fas fa-star  checked"></span>
+                                                                <span class="far fa-star"></span>
+                                                                <span class="far fa-star"></span>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="heading4 color-2 left-center">Lorem ipsum dolor sit amet,  Minima perspiciatis quis aperiam cupiditate, et veniam aut, maxime soluta placeat quisquam cum! Quidem, quisquam!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-5 mt-4 mt-md-0">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="text-center">
+                                            <img src="images/img 1.png" class="img-fluid" width="60">
+                                            <h6 class="heading2 left-center font-weight-bold text-uppercase mt-2 ml-2">Host name</h6>
+                                            <div class="color-star mt-1 left-center ml-3 ">
+                                                <span class="fas fa-star checked "></span>
+                                                <span class="fas fa-star checked "></span>
+                                                <span class="fas fa-star  checked"></span>
+                                                <span class="far fa-star"></span>
+                                                <span class="far fa-star"></span>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h6 class="heading3 text-center mt-3 font-weight-normal" >Offer Amount : $700</h6>
+                                        <h6 class="heading3 text-center font-weight-normal">Language : English</h6>
+                                        <h6 class="heading3 text-center font-weight-normal">Location : Turkey</h6>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="card shadow-sm mt-4">
+                                <div class="card-body">
+                                    <h6 class="text-uppercase color-1 font-weight-bold">Guest</h6>
+                                    <div class="row mt-3">
+                                        <div class="col-6">
+                                            <h6>Adult</h6>
+                                        </div>
+                                        <div class="col-6">
+                                            <h6 class=" text-right text-muted">01</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h6>Children</h6>
+                                        </div>
+                                        <div class="col-6">
+                                            <h6 class=" text-right text-muted">00</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h6>Infantats</h6>
+                                        </div>
+                                        <div class="col-6">
+                                            <h6 class=" text-right text-muted">01</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-6">
+                                            <h6 class="text-uppercase color-1 font-weight-bold">Start Date</h6>
+                                        </div>
+                                        <div class="col-6">
+                                            <h6 class="text-uppercase color-1 text-right font-weight-bold">2/7/2020</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h6 class="text-uppercase color-1 font-weight-bold">End Date</h6>
+                                        </div>
+                                        <div class="col-6">
+                                            <h6 class="text-uppercase color-1 text-right font-weight-bold">2/7/2020</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-6">
+                                            <h6 class="text-uppercase color-1 font-weight-bold">Location</h6>
+                                        </div>
+                                        <div class="col-6">
+                                            <h6 class=" text-muted text-right">Lahore</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12">
+                                            <h6 class="text-uppercase color-1 font-weight-bold">Host Preferance</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <form>
+                                                <input type="text" class="form-control mt-3" id="exampleInputlang1" aria-describedby="emailHelp" placeholder="LANGUAGE">
+                                                <input type="text" class="form-control mt-3" id="exampleInputgend2" aria-describedby="emailHelp" placeholder="GENDER">
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-12">
+                                            <h6 class="text-uppercase color-1 font-weight-bold">Selected attraction list</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-4">
+                                            <img src="images/selected.png" class="img-fluid">
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="images/selected.png" class="img-fluid">
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="images/selected.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-12">
+                                            <h6 class="text-uppercase color-1 font-weight-bold">Special request</h6>
+                                            <p class="text-muted" style="font-size: 0.8em;">We Promise that we will not spam you. We'llonly sent the best and most important deals</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function hideElementDash() {
+            var x = document.getElementById("col1");
+
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+    function c(passed_month, passed_year, calNum) {
+        var calendar = calNum == 0 ? calendars.cal1 : calendars.cal2;
+        makeWeek(calendar.weekline);
+        calendar.datesBody.empty();
+        var calMonthArray = makeMonthArray(passed_month, passed_year);
+        var r = 0;
+        var u = false;
+        while (!u) {
+            if (daysArray[r] == calMonthArray[0].weekday) {
+                u = true
+            } else {
+                calendar.datesBody.append('<div class="blank"></div>');
+                r++;
+            }
+        }
+        for (var cell = 0; cell < 42 - r; cell++) { // 42 date-cells in calendar
+            if (cell >= calMonthArray.length) {
+                calendar.datesBody.append('<div class="blank"></div>');
+            } else {
+                var shownDate = calMonthArray[cell].day;
+                var iter_date = new Date(passed_year, passed_month, shownDate);
+                if (
+                (
+                (shownDate != today.getDate() && passed_month == today.getMonth()) || passed_month != today.getMonth()) && iter_date < today) {
+                    var m = '<div class="past-date">';
+                } else {
+                    var m = checkToday(iter_date) ? '<div class="today">' : "<div>";
+                }
+                calendar.datesBody.append(m + shownDate + "</div>");
+            }
+        }
+
+        var color = "#444444";
+        calendar.calHeader.find("h2").text(i[passed_month] + " " + passed_year);
+        calendar.weekline.find("div").css("color", color);
+        calendar.datesBody.find(".today").css("color", "#87b633");
+
+        // find elements (dates) to be clicked on each time
+        // the calendar is generated
+        var clicked = false;
+        selectDates(selected);
+
+        clickedElement = calendar.datesBody.find('div');
+        clickedElement.on("click", function () {
+            clicked = $(this);
+            var whichCalendar = calendar.name;
+
+            if (firstClick && secondClick) {
+                thirdClicked = getClickedInfo(clicked, calendar);
+                var firstClickDateObj = new Date(firstClicked.year,
+                firstClicked.month,
+                firstClicked.date);
+                var secondClickDateObj = new Date(secondClicked.year,
+                secondClicked.month,
+                secondClicked.date);
+                var thirdClickDateObj = new Date(thirdClicked.year,
+                thirdClicked.month,
+                thirdClicked.date);
+                if (secondClickDateObj > thirdClickDateObj && thirdClickDateObj > firstClickDateObj) {
+                    secondClicked = thirdClicked;
+                    // then choose dates again from the start :)
+                    bothCals.find(".calendar_content").find("div").each(function () {
+                        $(this).removeClass("selected");
+                    });
+                    selected = {};
+                    selected[firstClicked.year] = {};
+                    selected[firstClicked.year][firstClicked.month] = [firstClicked.date];
+                    selected = addChosenDates(firstClicked, secondClicked, selected);
+                } else { // reset clicks
+                    selected = {};
+                    firstClicked = [];
+                    secondClicked = [];
+                    firstClick = false;
+                    secondClick = false;
+                    bothCals.find(".calendar_content").find("div").each(function () {
+                        $(this).removeClass("selected");
+                    });
+                }
+            }
+            if (!firstClick) {
+                firstClick = true;
+                firstClicked = getClickedInfo(clicked, calendar);
+                selected[firstClicked.year] = {};
+                selected[firstClicked.year][firstClicked.month] = [firstClicked.date];
+            } else {
+                secondClick = true;
+                secondClicked = getClickedInfo(clicked, calendar);
+
+                // what if second clicked date is before the first clicked?
+                var firstClickDateObj = new Date(firstClicked.year,
+                firstClicked.month,
+                firstClicked.date);
+                var secondClickDateObj = new Date(secondClicked.year,
+                secondClicked.month,
+                secondClicked.date);
+
+                if (firstClickDateObj > secondClickDateObj) {
+
+                    var cachedClickedInfo = secondClicked;
+                    secondClicked = firstClicked;
+                    firstClicked = cachedClickedInfo;
+                    selected = {};
+                    selected[firstClicked.year] = {};
+                    selected[firstClicked.year][firstClicked.month] = [firstClicked.date];
+
+                } else if (firstClickDateObj.getTime() == secondClickDateObj.getTime()) {
+                    selected = {};
+                    firstClicked = [];
+                    secondClicked = [];
+                    firstClick = false;
+                    secondClick = false;
+                    $(this).removeClass("selected");
+                }
+
+
+                // add between dates to [selected]
+                selected = addChosenDates(firstClicked, secondClicked, selected);
+            }
+            selectDates(selected);
+        });
+
+    }
+
+    function selectDates(selected) {
+        if (!$.isEmptyObject(selected)) {
+            var dateElements1 = datesBody1.find('div');
+            var dateElements2 = datesBody2.find('div');
+
+            function highlightDates(passed_year, passed_month, dateElements) {
+                if (passed_year in selected && passed_month in selected[passed_year]) {
+                    var daysToCompare = selected[passed_year][passed_month];
+                    for (var d in daysToCompare) {
+                        dateElements.each(function (index) {
+                            if (parseInt($(this).text()) == daysToCompare[d]) {
+                                $(this).addClass('selected');
+                            }
+                        });
+                    }
+
+                }
+            }
+
+            highlightDates(year, month, dateElements1);
+            highlightDates(nextYear, nextMonth, dateElements2);
+        }
+    }
+
+    function makeMonthArray(passed_month, passed_year) { // creates Array specifying dates and weekdays
+        var e = [];
+        for (var r = 1; r < getDaysInMonth(passed_year, passed_month) + 1; r++) {
+            e.push({
+                day: r,
+                // Later refactor -- weekday needed only for first week
+                weekday: daysArray[getWeekdayNum(passed_year, passed_month, r)]
+            });
+        }
+        return e;
+    }
+
+    function makeWeek(week) {
+        week.empty();
+        for (var e = 0; e < 7; e++) {
+            week.append("<div>" + daysArray[e].substring(0, 3) + "</div>")
+        }
+    }
+
+    function getDaysInMonth(currentYear, currentMon) {
+        return (new Date(currentYear, currentMon + 1, 0)).getDate();
+    }
+
+    function getWeekdayNum(e, t, n) {
+        return (new Date(e, t, n)).getDay();
+    }
+
+    function checkToday(e) {
+        var todayDate = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate();
+        var checkingDate = e.getFullYear() + '/' + (e.getMonth() + 1) + '/' + e.getDate();
+        return todayDate == checkingDate;
+
+    }
+
+    function getAdjacentMonth(curr_month, curr_year, direction) {
+        var theNextMonth;
+        var theNextYear;
+        if (direction == "next") {
+            theNextMonth = (curr_month + 1) % 12;
+            theNextYear = (curr_month == 11) ? curr_year + 1 : curr_year;
+        } else {
+            theNextMonth = (curr_month == 0) ? 11 : curr_month - 1;
+            theNextYear = (curr_month == 0) ? curr_year - 1 : curr_year;
+        }
+        return [theNextMonth, theNextYear];
+    }
+
+    function b() {
+        today = new Date;
+        year = today.getFullYear();
+        month = today.getMonth();
+        var nextDates = getAdjacentMonth(month, year, "next");
+        nextMonth = nextDates[0];
+        nextYear = nextDates[1];
+    }
+
+    var e = 480;
+
+    var today;
+    var year,
+    month,
+    nextMonth,
+    nextYear;
+
+    var r = [];
+    var i = [
+        "JANUARY",
+        "FEBRUARY",
+        "MARCH",
+        "APRIL",
+        "MAY",
+        "JUNE",
+        "JULY",
+        "AUGUST",
+        "SEPTEMBER",
+        "OCTOBER",
+        "NOVEMBER",
+        "DECEMBER"];
+    var daysArray = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"];
+
+    var cal1 = $("#calendar_first");
+    var calHeader1 = cal1.find(".calendar_header");
+    var weekline1 = cal1.find(".calendar_weekdays");
+    var datesBody1 = cal1.find(".calendar_content");
+
+    var cal2 = $("#calendar_second");
+    var calHeader2 = cal2.find(".calendar_header");
+    var weekline2 = cal2.find(".calendar_weekdays");
+    var datesBody2 = cal2.find(".calendar_content");
+
+    var bothCals = $(".calendar");
+
+    var switchButton = bothCals.find(".calendar_header").find('.switch-month');
+
+    var calendars = {
+        "cal1": {
+            "name": "first",
+                "calHeader": calHeader1,
+                "weekline": weekline1,
+                "datesBody": datesBody1
+        },
+            "cal2": {
+            "name": "second",
+                "calHeader": calHeader2,
+                "weekline": weekline2,
+                "datesBody": datesBody2
+        }
+    }
+
+
+    var clickedElement;
+    var firstClicked,
+    secondClicked,
+    thirdClicked;
+    var firstClick = false;
+    var secondClick = false;
+    var selected = {};
+
+    b();
+    c(month, year, 0);
+    c(nextMonth, nextYear, 1);
+    switchButton.on("click", function () {
+        var clicked = $(this);
+        var generateCalendars = function (e) {
+            var nextDatesFirst = getAdjacentMonth(month, year, e);
+            var nextDatesSecond = getAdjacentMonth(nextMonth, nextYear, e);
+            month = nextDatesFirst[0];
+            year = nextDatesFirst[1];
+            nextMonth = nextDatesSecond[0];
+            nextYear = nextDatesSecond[1];
+
+            c(month, year, 0);
+            c(nextMonth, nextYear, 1);
+        };
+        if (clicked.attr("class").indexOf("left") != -1) {
+            generateCalendars("previous");
+        } else {
+            generateCalendars("next");
+        }
+        clickedElement = bothCals.find(".calendar_content").find("div");
+    });
+
+
+    //  Click picking stuff
+    function getClickedInfo(element, calendar) {
+        var clickedInfo = {};
+        var clickedCalendar,
+        clickedMonth,
+        clickedYear;
+        clickedCalendar = calendar.name;
+        clickedMonth = clickedCalendar == "first" ? month : nextMonth;
+        clickedYear = clickedCalendar == "first" ? year : nextYear;
+        clickedInfo = {
+            "calNum": clickedCalendar,
+                "date": parseInt(element.text()),
+                "month": clickedMonth,
+                "year": clickedYear
+        }
+        return clickedInfo;
+    }
+
+
+    // Finding between dates MADNESS. Needs refactoring and smartening up :)
+    function addChosenDates(firstClicked, secondClicked, selected) {
+        if (secondClicked.date > firstClicked.date || secondClicked.month > firstClicked.month || secondClicked.year > firstClicked.year) {
+
+            var added_year = secondClicked.year;
+            var added_month = secondClicked.month;
+            var added_date = secondClicked.date;
+
+            if (added_year > firstClicked.year) {
+                // first add all dates from all months of Second-Clicked-Year
+                selected[added_year] = {};
+                selected[added_year][added_month] = [];
+                for (var i = 1;
+                i <= secondClicked.date;
+                i++) {
+                    selected[added_year][added_month].push(i);
+                }
+
+                added_month = added_month - 1;
+                while (added_month >= 0) {
+                    selected[added_year][added_month] = [];
+                    for (var i = 1;
+                    i <= getDaysInMonth(added_year, added_month);
+                    i++) {
+                        selected[added_year][added_month].push(i);
+                    }
+                    added_month = added_month - 1;
+                }
+
+                added_year = added_year - 1;
+                added_month = 11; // reset month to Dec because we decreased year
+                added_date = getDaysInMonth(added_year, added_month); // reset date as well
+
+                // Now add all dates from all months of inbetween years
+                while (added_year > firstClicked.year) {
+                    selected[added_year] = {};
+                    for (var i = 0; i < 12; i++) {
+                        selected[added_year][i] = [];
+                        for (var d = 1; d <= getDaysInMonth(added_year, i); d++) {
+                            selected[added_year][i].push(d);
+                        }
+                    }
+                    added_year = added_year - 1;
+                }
+            }
+
+            if (added_month > firstClicked.month) {
+                if (firstClicked.year == secondClicked.year) {
+                    selected[added_year][added_month] = [];
+                    for (var i = 1;
+                    i <= secondClicked.date;
+                    i++) {
+                        selected[added_year][added_month].push(i);
+                    }
+                    added_month = added_month - 1;
+                }
+                while (added_month > firstClicked.month) {
+                    selected[added_year][added_month] = [];
+                    for (var i = 1;
+                    i <= getDaysInMonth(added_year, added_month);
+                    i++) {
+                        selected[added_year][added_month].push(i);
+                    }
+                    added_month = added_month - 1;
+                }
+                added_date = getDaysInMonth(added_year, added_month);
+            }
+
+            for (var i = firstClicked.date + 1;
+            i <= added_date;
+            i++) {
+                selected[added_year][added_month].push(i);
+            }
+        }
+        return selected;
+    }
+});
+        </script>
+</body>
+
+</html>
