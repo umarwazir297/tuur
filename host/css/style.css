@@ -629,6 +629,9 @@ button.switch-month:hover {
   font-size: 0.9em;
   border-radius: 25px;
 }
+.h-full{
+  height: 100vh;
+}
 @media(max-width:780px){
   .btn-tick{
     background-color: #74d18d;
@@ -638,4 +641,10 @@ button.switch-month:hover {
     border-radius: 25px;
     width: 30%;
   }
+  .h-full{
+    height: auto;
+  }
+}
+.m-dash{
+  margin-top: 6rem;
 }
